@@ -1,0 +1,121 @@
+.register-event {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_register-eventName {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.form_register {
+    width: 800px;
+    z-index: 2;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 2px solid var(--primary);
+}
+
+.event-tickets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+    margin-bottom: 20px;
+}
+
+.ticket {
+    display: flex;
+    padding: 10px;
+    border-radius: 4px;
+    align-items: center;
+    border: 2px solid #ccc;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.ticket-name {
+    font-size: 16px;
+}
+
+.ticket-type {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.ticket-specialValidity {
+    color: #64748b;
+}
+
+
+.talk,
+.workshop {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.session-title {
+    margin-left: 8px;
+}
+
+.session-select {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.session-title {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.event-session-type {
+    font-size: 18px;
+}
+
+.pay {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pay-container {
+    width: 300px;
+}
+
+.pay-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-pay {
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-pay.disabled {
+    background-color: #ccc;
+    pointer-events: none;
+    outline: none;
+    color: #000;
+}

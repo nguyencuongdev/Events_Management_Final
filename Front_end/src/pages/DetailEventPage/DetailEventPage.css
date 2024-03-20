@@ -1,0 +1,32 @@
+.detail {
+    padding: 20px 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.event-content-title {
+    display: grid;
+    grid-template-columns: 10% 10% 1fr;
+    padding: 0 8px;
+}
+
+.event-content-title>h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.event-content-titmes {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    column-gap: 2px;
+}

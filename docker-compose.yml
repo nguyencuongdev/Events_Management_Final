@@ -1,0 +1,61 @@
+version: '3.7'
+
+services:
+    app:
+        build:
+            context: ./Front_end
+            dockerfile: Dockerfile
+        image: event_managment_fe
+        container_name: event_managment_fe
+        restart: unless-stopped
+        tty: true
+        environment:
+            REACT_APP_API_BASE_URL: be/api/v1
+        volumes:
+            - ./Front_end:/var/www/front_end
+        ports:
+            - 5050:3000
+        depends_on:
+            - be
+        networks:
+            - event_managment
+    be:
+        build:
+            args:
+                user: cdev
+                uid: 1000
+            context: ./Back_end
+            dockerfile: Dockerfile
+        image: event_managment_be
+        container_name: event_managment_be
+        restart: unless-stopped
+        working_dir: /var/www/back_end
+        environment:
+            DB_CONNECTION: mysql
+            DB_HOST: db
+            DB_PORT: 3306
+            DB_DATABASE: hanoidb
+            DB_USERNAME: root
+            DB_PASSWORD: root
+        volumes:
+            - ./Back_end:/var/www/back_end
+        ports:
+            - 8080:8000
+        depends_on:
+            - db
+        networks:
+            - event_managment
+    db:
+        image: mysql:5.7
+        container_name: event_managment-db
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: hanoidb
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+        networks:
+            - event_managment
+networks:
+    event_managment:
+        driver: bridge

@@ -1,0 +1,43 @@
+.header {
+    height: var(--height_header);
+}
+
+.navbar {
+    height: 100%;
+}
+
+.navbar-organizer {
+    color: #fff;
+}
+
+.nav-action {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    padding: 8px 0;
+    padding-right: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_btn {
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.nav_btn.btn-login {
+    background-color: var(--blue);
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav_btn.btn-login:hover {
+    background-color: #0162c9;
+}
+
+.nav_btn.btn-login:focus {
+    outline: none;
+}

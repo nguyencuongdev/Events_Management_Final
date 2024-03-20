@@ -1,0 +1,17 @@
+.room {
+    display: grid;
+    grid-template-columns: 11% 1fr;
+    margin-bottom: 6px;
+}
+
+.room-name {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.room-sessions {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    column-gap: 2px;
+}

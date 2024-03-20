@@ -1,0 +1,24 @@
+.event {
+    border: 2px solid var(--blue);
+    padding: 10px;
+    margin-top: 16px;
+    border-radius: 4px;
+}
+
+.event_link {
+    color: #000;
+}
+
+.event_link:hover {
+    text-decoration: none;
+}
+
+.event-name {
+    font-size: 24px;
+    color: var(--blue);
+    margin-bottom: 4px;
+}
+
+.event_subtile {
+    margin-bottom: 0;
+}

@@ -1,0 +1,17 @@
+.errorpage-container {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: var(--height_header);
+    align-items: center;
+}
+
+.errorpage-message {
+    font-size: 50px;
+    font-weight: 600;
+    color: red;
+}

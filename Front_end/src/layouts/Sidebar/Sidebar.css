@@ -1,0 +1,14 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--height_header);
+    background-color: #f8f9fa;
+    width: 15%;
+    padding: 26px 15px 20px;
+    bottom: 0;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 500;
+}
